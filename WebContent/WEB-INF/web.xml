@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Phase_2_AdvJ</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- ASSIGNMENT CONTEXT PARAM START-->  
+   
+  <context-param>
+  	<param-name>a</param-name>
+  	<param-value>10</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>b</param-name>
+  	<param-value>20</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>c</param-name>
+  	<param-value>30</param-value>
+  </context-param>
+  
+  <servlet> 
+  	<servlet-name>ContextParamServlet1</servlet-name>  
+	<servlet-class>assignment.contextparam.ContextParamServlet1</servlet-class>  
+  	<init-param>
+  		<param-name>d</param-name>
+  		<param-value>40</param-value>
+  	</init-param>
+  </servlet>
+  <servlet>
+  	<servlet-name>ContextParamServlet2</servlet-name>  
+	<servlet-class>assignment.contextparam.ContextParamServlet2</servlet-class>  
+  	<init-param>
+  		<param-name>d</param-name>
+  		<param-value>40</param-value>
+  	</init-param>
+  </servlet>
+  <servlet>
+  	<servlet-name>ContextParamServlet3</servlet-name>  
+	<servlet-class>assignment.contextparam.ContextParamServlet3</servlet-class> 
+  	<init-param>
+  		<param-name>d</param-name>
+  		<param-value>40</param-value>
+  	</init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ContextParamServlet1</servlet-name>
+    <url-pattern>/ContextParamServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContextParamServlet2</servlet-name>
+    <url-pattern>/ContextParamServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContextParamServlet3</servlet-name>
+    <url-pattern>/ContextParamServlet3</url-pattern>
+  </servlet-mapping>
+
+  <!-- ASSIGNMENT CONTEXT PARAM END-->
+  
+  <servlet>
+    <servlet-name>PostHandler</servlet-name>
+    <servlet-class>practice.PostHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PostHandler</servlet-name>
+    <url-pattern>/posthandler</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetHandler</servlet-name>
+    <servlet-class>practice.GetHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetHandler</servlet-name>
+    <url-pattern>/gethandler</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OnSCG</servlet-name>
+    <servlet-class>practice.OnSCG</servlet-class>
+    <init-param>
+      <param-name>n1</param-name>
+      <param-value>100</param-value>
+    </init-param>
+    <init-param>
+      <param-name>n2</param-name>
+      <param-value>200</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OnSCG</servlet-name>
+    <url-pattern>/OnSCG</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ASSIGNMENT FILTER START -->
+  
+  <filter>
+  	<filter-name>UserProfileFilter</filter-name>
+  	<filter-class>assignment.filter.UserProfileFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+  	<filter-name>UserProfileFilter</filter-name>
+  	<url-pattern>/UserName</url-pattern>
+  </filter-mapping>
+ 
+  <filter-mapping>
+  	<filter-name>UserProfileFilter</filter-name>
+  	<url-pattern>/Profile</url-pattern>
+  </filter-mapping> 
+  
+  <servlet>
+    <servlet-name>DashBoard</servlet-name>
+    <servlet-class>assignment.filter.DashBoard</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DashBoard</servlet-name>
+    <url-pattern>/UserName</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>DashBoard</servlet-name>
+    <url-pattern>/Profile</url-pattern>
+  </servlet-mapping>
+  
+
+  <!-- ASSIGNMENT FILTER END-->
+  
+  
+  
+  
+  
+</web-app>
